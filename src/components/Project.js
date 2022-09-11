@@ -1,32 +1,39 @@
 import { Tab, Nav, Row, Col, Container } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import colorSharp2 from '../assets/img/color-sharp2.png';
-import projImg1 from '../assets/img/project-img1.png';
-import projImg2 from '../assets/img/project-img2.png';
-import projImg3 from '../assets/img/project-img3.png';
+import facerecognitionbrain from '../assets/img/face-recognition-brain.png';
+import WeatherApp from '../assets/img/Weather-App.png';
+import robofriends from '../assets/img/robofriends.png';
+import Portfolio from '../assets/img/Portfolio.png';
 
 export const Project = () => {
 
-    const projects = [
+    const projectsTab1 = [
         {
-            title: "Project1",
-            description: "Project Description",
-            imgUrl: projImg1,
+            title: "face-recognition-brain",
+            description: "It detect the face of a person from the given picture using clarify API and store the user information.",
+            imgUrl: facerecognitionbrain,
+            srcUrl: 'https://rom-kothadia.github.io/face-recognition-brain/',
         },
         {
-            title: "Project2",
-            description: "Project Description",
-            imgUrl: projImg2,
+            title: "Weather-App",
+            description: "It provides weather details based on the location.",
+            imgUrl: WeatherApp,
+            srcUrl: 'https://rom-kothadia.github.io/Weather-App/',
         },
         {
-            title: "Project3",
-            description: "Project Description",
-            imgUrl: projImg3,
+            title: "robofriends",
+            description: "It filters the user information based on search and generate unique robots using API",
+            imgUrl: robofriends,
+            srcUrl: 'https://rom-kothadia.github.io/robofriends/',
         },
+    ];
+    const projectsTab2 = [
+        {},
         {
-            title: "Project4",
-            description: "Project Description",
-            imgUrl: projImg1,
+            title: "Portfolio",
+            description: "",
+            imgUrl: Portfolio,
+            srcUrl: 'https://github.com/Rom-Kothadia/react-portfolio',
         },
     ];
 
@@ -36,7 +43,7 @@ export const Project = () => {
                 <Row>
                     <Col size={12}>
                         <h2>Projects</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nam? Voluptas, laboriosam ut aliquid aperiam maiores asperiores voluptatem delectus molestiae perferendis numquam, non repellat quidem adipisci ipsum harum ab commodi.</p>
+                        <p>Click on any project to see the details.</p>
                         <Tab.Container id='project-tabs' defaultActiveKey='first'>
                         <Nav variant="pills" defaultActiveKey="/home">
                         <Nav.Item>
@@ -45,15 +52,12 @@ export const Project = () => {
                         <Nav.Item>
                             <Nav.Link eventKey="second">Tab Two</Nav.Link>
                         </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="third">Tab Three</Nav.Link>
-                        </Nav.Item>
                         </Nav>
                         <Tab.Content>
                             <Tab.Pane eventKey='first'>
                             <Row>
                                 {
-                                    projects.map((project, index) => {
+                                    projectsTab1.map((project, index) => {
                                         return ( 
                                             <ProjectCard
                                             key={index}
@@ -64,14 +68,26 @@ export const Project = () => {
                                 }
                             </Row>
                             </Tab.Pane>
-                            <Tab.Pane eventKey='second'>Lorem ipsum</Tab.Pane>
-                            <Tab.Pane eventKey='third'>Lorem ipsum</Tab.Pane>
+                            <Tab.Pane eventKey='second'>
+                            <Row>
+                                {
+                                    projectsTab2.map((project, index) => {
+                                        return ( 
+                                            <ProjectCard
+                                            key={index}
+                                            {...project}
+                                            />
+                                        )
+                                    })
+                                }
+                            </Row>
+                            </Tab.Pane>
+
                         </Tab.Content>
                         </Tab.Container>
                     </Col>
                 </Row>
             </Container>
-            <img className='background-image-right' alt='' src={colorSharp2}></img>
         </section>
     )
 }

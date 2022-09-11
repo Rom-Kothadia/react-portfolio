@@ -251,7 +251,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: inline-block;
 }
 .banner h1 {
-  font-size: 65px;
+  font-size: 60px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
@@ -305,7 +305,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  margin-bottom: 0;
+  padding: 260px 0 100px 0;
+  background-image: url('./assets/img/banner-bg.png');
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: repeat;
 }
 .project h2 {
 	font-size: 45px;
@@ -323,13 +328,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .project .nav.nav-pills {
   width: 72%;
-  margin: 0 auto;
+  margin: 20px auto;
   border-radius: 50px;
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
-  width: 33.33333%;
+  width: 50%;
 }
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
@@ -418,14 +423,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 15px;
   letter-spacing: 0.8px;
 }
-.background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
-}
+
 
 .App {
   text-align: center;
