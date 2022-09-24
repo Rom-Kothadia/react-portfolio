@@ -1,9 +1,12 @@
 import { Tab, Nav, Row, Col, Container } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
+
+//Image files 
 import facerecognitionbrain from '../assets/img/face-recognition-brain.png';
 import WeatherApp from '../assets/img/Weather-App.png';
 import robofriends from '../assets/img/robofriends.png';
 import Portfolio from '../assets/img/Portfolio.png';
+import crudapp from '../assets/img/crud-app.png';
 
 export const Project = () => {
 
@@ -15,10 +18,10 @@ export const Project = () => {
             srcUrl: 'https://rom-kothadia.github.io/face-recognition-brain/',
         },
         {
-            title: "Weather-App",
-            description: "It provides weather details based on the location.",
-            imgUrl: WeatherApp,
-            srcUrl: 'https://rom-kothadia.github.io/Weather-App/',
+            title: "crud-app",
+            description: "It perform all four basic operation: Create, Read, Update and Delete using react and json-server",
+            imgUrl: crudapp,
+            srcUrl: 'https://rom-kothadia.github.io/crud-app/',
         },
         {
             title: "robofriends",
@@ -26,6 +29,13 @@ export const Project = () => {
             imgUrl: robofriends,
             srcUrl: 'https://rom-kothadia.github.io/robofriends/',
         },
+        {
+            title: "Weather-App",
+            description: "It provides weather details based on the location.",
+            imgUrl: WeatherApp,
+            srcUrl: 'https://rom-kothadia.github.io/Weather-App/',
+        },
+
     ];
     const projectsTab2 = [
         {},
